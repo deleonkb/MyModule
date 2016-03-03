@@ -12,12 +12,10 @@ class MyModule:
     '''
     Module Name:
     MyModule
-
     Module Description:
-    A KBase module: MyModule
-This sample module contains one small method - filter_contigs.
+    
     '''
-
+    
     ######## WARNING FOR GEVENT USERS #######
     # Since asynchronous IO can lead to methods - even the same method -
     # interrupting each other, you must be *very* careful when using global
@@ -28,7 +26,7 @@ This sample module contains one small method - filter_contigs.
     # Class variables and functions can be defined in this block
     workspaceURL = None
     #END_CLASS_HEADER
-
+    
     # config contains contents of config file in a hash or None if it couldn't
     # be found
     def __init__(self, config):
@@ -204,10 +202,10 @@ This sample module contains one small method - filter_contigs.
         print('returning:'+pformat(returnVal))
                 
         #END filter_contigs
-
+        
         # At some point might do deeper type checking...
-        if not isinstance(returnVal, dict):
-            raise ValueError('Method filter_contigs return value ' +
-                             'returnVal is not type dict as required.')
+        if not isinstance(returnVal, object):
+            raise ValueError('Method count_contigs return value ' +
+                             'returnVal is not type object as required.')
         # return the results
         return [returnVal]
