@@ -2,7 +2,7 @@ module-name:
     MyModule
 
 module-description:
-    A KBase module
+    A KBase module--test pull
 
 service-language:
     python
